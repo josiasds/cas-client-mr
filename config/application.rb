@@ -21,5 +21,8 @@ module CasClient
     # config.i18n.default_locale = :de
 
     config.rack_cas.server_url = 'http://cas-server-mr.herokuapp.com/'
+
+    require 'rack-cas/session_store/active_record'
+    config.rack_cas.session_store = RackCAS::ActiveRecordStore
   end
 end
